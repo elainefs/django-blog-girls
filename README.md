@@ -86,4 +86,4 @@ Este projeto está sobre a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para
 
 <hr>
 
-Made with <3 by [Elaine Ferreira](https://github.com/elainefs)
+Made with ❤️ by [Elaine Ferreira](https://github.com/elainefs)
