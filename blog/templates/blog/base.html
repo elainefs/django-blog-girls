@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+  <head>
+    <title>Blog Django</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+  </head>
+  <body>
+    <div class="page-header">
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"
+                ><span class="bi bi-plus-circle-fill"></span
+            ></a>
+        {% endif %}
+      <h1><a href="/">Blog Django</a></h1>
+    </div>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">{% block content %} {% endblock %}</div>
+      </div>
+    </div>
+  </body>
+</html>
